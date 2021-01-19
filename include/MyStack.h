@@ -57,9 +57,9 @@ class MyStack {
          if (size != 0) {
              position--;
              return stack[position];
-         } else{
+         } else {
              std::cout << "stack is empty";
-         }       
+         }
      }
      void push(double x) {
          if (position < size) {
