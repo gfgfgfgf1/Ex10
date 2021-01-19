@@ -1,4 +1,4 @@
-﻿// Copyright DB 2021
+﻿  // Copyright DB 2021
 
 #include <string>
 #include "postfix.h"
