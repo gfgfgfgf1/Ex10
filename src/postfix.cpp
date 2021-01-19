@@ -25,22 +25,22 @@ std::string infix2postfix(std::string inf) {
             if (isdigit(inf[i])) {
                 output += inf[i];
                 output += " ";
-            } else if (inf[i] == '.'){
+            } else if (inf[i] == '.') {
                 output = output.substr(0, output.size() - 1);
                 output += inf[i];
-            } else if (output[output.size()] == '.'){
+            } else if (output[output.size()] == '.') {
                 output += inf[i];
                 output += " ";
-            } else if (inf[i] == '('){
+            } else if (inf[i] == '(') {
                 char_stack.push('(');
-            } else if (inf[i] == ')'){
+            } else if (inf[i] == ')') {
                 while (char_stack.get() != '(') {
                     output += char_stack.get();
                     output += " ";
                     char_stack.pop();
                 }
                 char_stack.pop();
-            } else{
+            } else {
                 if (isOperator(char_stack.get())) {
                     while (priority(inf[i])
                         <= priority(char_stack.get())) {
